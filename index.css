@@ -1,0 +1,173 @@
+
+/* Default mode: upright mobile */
+
+html {
+	font-family: sans-serif;
+	text-align: center;
+	color: white;
+	background-color: black;
+}
+
+h2 {
+	margin-top: 1em;
+	margin-bottom: 0.65em;
+}
+
+p {
+	word-break: break-word;
+}
+
+a {
+	color: inherit;
+}
+
+#part-artist-profile {
+	max-width: 100%;
+}
+
+#part-artist-title {
+	font-family: serif;
+	margin-top: 0;
+}
+
+#part-artist-bio {
+	margin: auto;
+	max-width: 40em;
+}
+
+#part-artist-email {
+	margin-bottom: 0;
+}
+
+#part-general-text {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+#part-donate-crypto {
+	margin-top: 0;
+	display: inline-block;
+	text-align: left;
+}
+
+.narrow {
+	margin: auto;
+	width: 80%;
+}
+
+.part-general-text-item {
+	margin-top: 0.3em;
+	margin-bottom: 0;
+}
+
+.wrapper {
+	margin: 4vh 3vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: space-between;
+	gap: 1.8em;
+}
+
+.disabled {
+	cursor: not-allowed;
+	filter: brightness(50%);
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0.75em;
+	grid-auto-rows: 3em;
+}
+
+.grid-item {
+	display: grid;
+	align-items: center;
+	padding: 0 4px;
+	text-decoration: none;
+	border: 1px solid white;
+	border-radius: 17%;
+	transition: color 0.2s, background-color 0.2s;
+	transition-timing-function: ease-out;
+}
+
+.grid-item:hover {
+	color: black;
+	background-color: white;
+}
+
+.grid-type-1 {
+	grid-template-columns: 1fr;
+}
+
+
+/* Mode: tilted phone, upright tablet */
+@media (min-width:641px)  { 
+
+	#part-artist-profile {
+		max-width: 50%;
+	}
+
+	#part-general-license {
+		margin-top: 0;
+	}
+
+	.grid-container {
+		grid-auto-rows: 3em;
+	}
+
+	.grid-type-1 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.grid-type-2 {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+
+/* Mode: tilted tablet */
+@media (min-width:961px)  { 
+
+	#part-artist-profile {
+		max-width: 26em;
+	}
+
+	.wrapper {
+		height: 92vh;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.section {
+		min-width: 50%;
+	}
+
+	.grid-container {
+		grid-auto-rows: 3.2em;
+		grid-gap: 0.7em;
+	}
+}
+
+
+/* Mode: desktop */
+@media (min-width:1281px) { 
+
+	.wrapper {
+		justify-content: center;
+		gap: 2em;
+	}
+
+	.section {
+		min-width: 38em;
+	}
+
+	.grid-container {
+		grid-auto-rows: 2.55em;
+	}
+}
+
